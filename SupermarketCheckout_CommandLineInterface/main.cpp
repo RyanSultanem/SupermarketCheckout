@@ -54,9 +54,7 @@ bool getChoseItemChoice()
 	std::cout << "1. Buy Items" << std::endl;
 	std::cout << "2. Stop" << std::endl;
 
-	int choice = read<int>(std::cin);
-
-	return choice == 1;
+	return read<int>(std::cin) == 1;
 }
 
 int main()

@@ -43,9 +43,7 @@ private:
 		std::cout << "1. Add" << std::endl;
 		std::cout << "2. Stop" << std::endl;
 
-		int choice = read<int>(m_in);
-
-		return choice == 1;
+		return read<int>(m_in) == 1;
 	}
 };
 
