@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="DiscountStrategyTest.cpp">
+      <Filter>tests</Filter>
+    </ClCompile>
+    <ClCompile Include="ReceiptTest.cpp">
+      <Filter>tests</Filter>
+    </ClCompile>
+    <ClCompile Include="DiscountManagerTest.cpp">
+      <Filter>tests</Filter>
+    </ClCompile>
+    <ClCompile Include="SueprmarketTest.cpp">
+      <Filter>tests</Filter>
+    </ClCompile>
+    <ClCompile Include="ProductCatalogTest.cpp">
+      <Filter>tests</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="tests">
+      <UniqueIdentifier>{2d4fa25d-7e50-4540-a047-ba20d278c8f6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
