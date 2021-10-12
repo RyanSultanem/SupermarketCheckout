@@ -7,7 +7,7 @@
 enum class InteractionMode
 {
 	Default = 1,
-	Customize = 2,
+	Manual = 2,
 	File = 3
 };
 

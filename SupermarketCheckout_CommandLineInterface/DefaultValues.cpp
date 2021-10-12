@@ -7,11 +7,11 @@ class DefaultProductCatalogFiller : public supermarket::ProductCatalogFiller
 public:
 	void fillProductCatalog(supermarket::ProductCatalog & producCatalog) const override
 	{
-		producCatalog.addProduct(supermarket::Product("Product1", 1., true), 10);
-		producCatalog.addProduct(supermarket::Product("Product2", 2., true), 8);
-		producCatalog.addProduct(supermarket::Product("Product3", 3., false), 6);
-		producCatalog.addProduct(supermarket::Product("Product4", 4., true), 4);
-		producCatalog.addProduct(supermarket::Product("Product5", 5., true), 2);
+		producCatalog.addProduct(supermarket::Product("DefaultProduct1", 1., true), 10);
+		producCatalog.addProduct(supermarket::Product("DefaultProduct2", 2., true), 8);
+		producCatalog.addProduct(supermarket::Product("DefaultProduct3", 3., false), 6);
+		producCatalog.addProduct(supermarket::Product("DefaultProduct4", 4., true), 4);
+		producCatalog.addProduct(supermarket::Product("DefaultProduct5", 5., true), 2);
 	}
 };
 

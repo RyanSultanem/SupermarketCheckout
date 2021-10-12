@@ -1,0 +1,42 @@
+======================================
+Receipt:
+
+All Items:
+DefaultProduct5	UP: 5	#: 1	T: 5
+DefaultProduct4	UP: 4	#: 2	T: 8
+DefaultProduct3	UP: 3	#: 3	T: 9
+DefaultProduct2	UP: 2	#: 3	T: 6
+DefaultProduct1	UP: 1	#: 2	T: 2
+DefaultProduct1	UP: 1	#: 3	T: 3
+DefaultProduct2	UP: 2	#: 1	T: 2
+Undiscounted Total: 35
+
+Discounted Items:
+DefaultProduct1	UP: 1	#: 3	T: 3
+DefaultProduct2	UP: 2	#: 1	T: 2
+Discounted Total: 5
+
+Total: 30
+======================================
+
+======================================
+Receipt:
+
+All Items:
+FileInputProduct5	UP: 5	#: 2	T: 10
+FileInputProduct4	UP: 4	#: 1	T: 4
+FileInputProduct3	UP: 3	#: 5	T: 15
+FileInputProduct2	UP: 2	#: 2	T: 4
+FileInputProduct1	UP: 1	#: 2	T: 2
+FileInputProduct1	UP: 1	#: 2	T: 2
+FileInputProduct2	UP: 2	#: 1	T: 2
+Undiscounted Total: 39
+
+Discounted Items:
+FileInputProduct1	UP: 1	#: 2	T: 2
+FileInputProduct2	UP: 2	#: 1	T: 2
+Discounted Total: 4
+
+Total: 35
+======================================
+

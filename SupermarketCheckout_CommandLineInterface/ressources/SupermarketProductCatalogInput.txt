@@ -1,0 +1,6 @@
+5
+FileInputProduct1 1 Y 10
+FileInputProduct2 2 Y 10
+FileInputProduct3 3 N 10
+FileInputProduct4 4 N 10
+FileInputProduct5 5 Y 10

@@ -144,6 +144,7 @@
     <ClCompile Include="InputInteraction.cpp" />
     <ClCompile Include="InteractionHelper.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Printer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SupermarketCheckout\SupermarketCheckout.vcxproj">
@@ -155,6 +156,7 @@
     <ClInclude Include="DefaultValues.hpp" />
     <ClInclude Include="InputInteraction.hpp" />
     <ClInclude Include="InteractionHelper.hpp" />
+    <ClInclude Include="Printer.hpp" />
     <ClInclude Include="Utility.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
