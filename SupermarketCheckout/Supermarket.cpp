@@ -39,7 +39,7 @@ void Supermarket::fillProducts(const ProductCatalogFiller & filler)
 
 void Supermarket::bookReceit(const Receipt & receipt)
 {
-    m_receitHistory.push_back(receipt);
+    m_receiptHistory.push_back(receipt);
 }
 
 void Supermarket::removeProductsFromCatalog(const ProductsCount & products)

@@ -95,6 +95,8 @@ static std::unique_ptr<DiscountStrategy> constructDiscountStrategyFromType(Disco
 	{
 	case DiscountStrategyType::IdenticalItems: return std::make_unique<DiscountIdenticalItem>(threshold);
 	case DiscountStrategyType::ItemCount: return std::make_unique<DiscountItemCount>(threshold);
+
+	default: return std::make_unique<DiscountIdenticalItem>(threshold);
 	}
 }
 

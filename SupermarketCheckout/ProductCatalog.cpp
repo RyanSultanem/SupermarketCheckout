@@ -39,7 +39,7 @@ int ProductCatalog::procutCount(const Product & product) const
 {
 	auto it = m_productsCount.find(product);
 	
-	return it != end() ? it->second : 0.;
+	return it != end() ? it->second : 0;
 }
 
 ProductCatalogCIterator ProductCatalog::begin() const

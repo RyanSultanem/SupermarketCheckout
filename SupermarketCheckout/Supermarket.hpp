@@ -21,7 +21,7 @@ private:
 	ProductCatalog m_catalog;
 	DiscountManager m_discountManager;
 
-	std::vector<Receipt> m_receitHistory;
+	std::vector<Receipt> m_receiptHistory;
 
 private:
 	void bookReceit(const Receipt & receipt);
