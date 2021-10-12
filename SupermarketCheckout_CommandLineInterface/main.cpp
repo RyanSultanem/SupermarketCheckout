@@ -1,40 +1,12 @@
 #include "../SupermarketCheckout/Supermarket.hpp"
 
 #include "InteractionHelper.hpp"
+#include "Printer.hpp"
 #include "Utility.hpp"
 
 #include <fstream>
 #include <iostream>
 #include <String>
-
-void print(const supermarket::ProductsCount & products)
-{
-	for (auto & product : products)
-		std::cout << product.first.name() << "\t" << product.second << std::endl;
-	std::cout << std::endl;
-}
-
-void print(const supermarket::ReceiptItem & item, std::ostream & out)
-{
-	out << item.productName() << "\t" << "UP: " << item.unitPrice() << "\t" << "#: " << item.itemCount() << "\t" << "T: " << item.computeTotal() << std::endl;
-}
-
-void print(const supermarket::Receipt & receipt, std::ostream & out)
-{
-	out << "Receipt:" << std::endl << std::endl;
-
-	out << "All Items:" << std::endl;
-	for (auto & item : receipt.getItems())
-		print(item, out); 
-	out << "Undiscounted Total: " << receipt.computeTotalUndiscounted() << std::endl << std::endl;
-	
-	out << "Discounted Items:" << std::endl;
-	for (auto & item : receipt.getItemsDiscounted())
-		print(item, out);
-	out << "Discounted Total: " << receipt.computeTotalDiscount() << std::endl << std::endl;
-
-	out << "Total: " << receipt.computeTotal() << std::endl << std::endl;
-}
 
 static InteractionMode readInteractionModeChoice()
 {
@@ -48,7 +20,7 @@ static InteractionMode readInteractionModeChoice()
 	return static_cast<InteractionMode>(modeChoice);
 }
 
-bool getChoseItemChoice()
+static bool getChoseItemChoice()
 {
 	std::cout << "Choose:" << std::endl;
 	std::cout << "1. Buy Items" << std::endl;
@@ -65,7 +37,6 @@ int main()
 	supermarket::Supermarket supermarket = interaction->constructSupermarket();
 
 	bool chooseItems = getChoseItemChoice();
-
 	while (chooseItems)
 	{
 		// Consutrct Order based on supermarket catalog
