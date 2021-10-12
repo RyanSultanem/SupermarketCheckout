@@ -19,7 +19,7 @@ supermarket::Supermarket constructDefaultSupermarket()
 {
 	std::vector<supermarket::DiscountStrategyInfo> strategyInfos;
 	strategyInfos.push_back({ supermarket::DiscountStrategyType::IdenticalItems, 3 });
-	strategyInfos.push_back({ supermarket::DiscountStrategyType::ItemCount,3 });
+	strategyInfos.push_back({ supermarket::DiscountStrategyType::ItemCount, 3 });
 
 	supermarket::Supermarket supermarket(strategyInfos);
 	supermarket.fillProducts(DefaultProductCatalogFiller());

@@ -17,8 +17,8 @@ TEST(Receipt, Empty)
 {
 	Receipt receipt;
 
-	const std::vector<ReceiptItem> & receiptItems = receipt.getItems();
-	const std::vector<ReceiptItem> & receiptItemsDiscounted = receipt.getItemsDiscounted();
+	const std::unordered_set<ReceiptItem> & receiptItems = receipt.getItems();
+	const std::unordered_set<ReceiptItem> & receiptItemsDiscounted = receipt.getItemsDiscounted();
 
 	EXPECT_EQ(receiptItems.size(), 0);
 	EXPECT_EQ(receiptItemsDiscounted.size(), 0);

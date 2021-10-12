@@ -1,6 +1,6 @@
 #pragma once
 
-#include <vector>
+#include <unordered_set>
 #include <string>
 
 namespace supermarket {
@@ -20,32 +20,52 @@ public:
 
 	double computeTotal() const;
 
+	bool operator==(const ReceiptItem & other) const;
+
 private:
 	std::string m_productName;
 	int m_itemCount = 0;
 	double m_unitPrice = 0.;
 };
 
-typedef std::vector<ReceiptItem>::const_iterator ReceiptItemCIterator;
+} // namespace supermarket
+
+namespace std {
+
+template<>
+struct hash<supermarket::ReceiptItem>
+{
+	std::size_t operator()(const supermarket::ReceiptItem & receiptItem) const
+	{
+		// Unit count left on purpose, part of the output
+		return (hash<string>()(receiptItem.productName())
+			+ hash<double>()(receiptItem.unitPrice()));
+	}
+};
+
+} // namespace std
+
+namespace supermarket {
 
 class Receipt
 {
 public:
 	Receipt() = default;
 
-	const std::vector<ReceiptItem> getItems() const;
-	const std::vector<ReceiptItem> getItemsDiscounted() const;
+	const std::unordered_set<ReceiptItem> getItems() const;
+	const std::unordered_set<ReceiptItem> getItemsDiscounted() const;
 
-	void addItems(const std::vector<ReceiptItem> & items);
-	void addItemsDiscounted(const std::vector<ReceiptItem> & itemsDiscounted);
+	void addItems(const std::unordered_set<ReceiptItem> & items);
+	void addItemsDiscounted(const std::unordered_set<ReceiptItem> & itemsDiscounted);
 
 	double computeTotal() const;
 	double computeTotalDiscount() const;
 	double computeTotalUndiscounted() const;
 
 private:
-	std::vector<ReceiptItem> m_items;
-	std::vector<ReceiptItem> m_itemsDiscounted;
+	std::unordered_set<ReceiptItem> m_items;
+	std::unordered_set<ReceiptItem> m_itemsDiscounted;
 };
 
 } // namespace supermarket
+
