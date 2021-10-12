@@ -1,8 +1,8 @@
 #pragma once
 
-#include "DiscountManager.hpp"
-#include "ProductCatalog.hpp"
-#include "ProductCatalog.fwd.hpp"
+#include "discount/DiscountManager.hpp"
+#include "product/ProductCatalog.hpp"
+#include "product/ProductCatalog.fwd.hpp"
 #include "Receipt.hpp"
 
 #include <vector>

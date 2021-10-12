@@ -19,22 +19,22 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DiscountManager.hpp" />
-    <ClInclude Include="DiscountStrategy.hpp" />
-    <ClInclude Include="Product.hpp" />
-    <ClInclude Include="ProductCatalog.hpp" />
-    <ClInclude Include="ProductCatalog.fwd.hpp" />
-    <ClInclude Include="ProductCatalogFiller.hpp" />
+    <ClInclude Include="discount\DiscountManager.hpp" />
+    <ClInclude Include="discount\DiscountStrategy.hpp" />
+    <ClInclude Include="product\Product.hpp" />
+    <ClInclude Include="product\ProductCatalog.fwd.hpp" />
+    <ClInclude Include="product\ProductCatalog.hpp" />
+    <ClInclude Include="product\ProductCatalogFiller.hpp" />
     <ClInclude Include="Receipt.hpp" />
     <ClInclude Include="ReceiptHelper.hpp" />
     <ClInclude Include="Supermarket.hpp" />
     <ClInclude Include="Utility.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DiscountManager.cpp" />
-    <ClCompile Include="DiscountStrategy.cpp" />
-    <ClCompile Include="Product.cpp" />
-    <ClCompile Include="ProductCatalog.cpp" />
+    <ClCompile Include="discount\DiscountManager.cpp" />
+    <ClCompile Include="discount\DiscountStrategy.cpp" />
+    <ClCompile Include="product\Product.cpp" />
+    <ClCompile Include="product\ProductCatalog.cpp" />
     <ClCompile Include="Receipt.cpp" />
     <ClCompile Include="ReceiptHelper.cpp" />
     <ClCompile Include="Supermarket.cpp" />

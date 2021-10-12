@@ -1,5 +1,5 @@
 #include "DiscountStrategy.hpp"
-#include "Utility.hpp"
+#include "../Utility.hpp"
 
 namespace supermarket {
 

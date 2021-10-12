@@ -1,7 +1,7 @@
 #include "pch.h"
 
-#include "../SupermarketCheckout/Product.hpp"
-#include "../SupermarketCheckout/DiscountStrategy.hpp"
+#include "../SupermarketCheckout/discount/DiscountStrategy.hpp"
+#include "../SupermarketCheckout/product/Product.hpp"
 
 namespace supermarket {
 

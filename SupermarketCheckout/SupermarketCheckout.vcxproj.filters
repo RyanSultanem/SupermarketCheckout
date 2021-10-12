@@ -1,72 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="supermarket">
+      <UniqueIdentifier>{344b56cb-489b-4030-9d57-c724000b9dc5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="supermarket\discount">
+      <UniqueIdentifier>{94baf842-3499-4ea8-88ab-df3679ad73af}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="supermarket\product">
+      <UniqueIdentifier>{e1e8092b-ee3a-4ca3-b775-3da7b48342f8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Product.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ProductCatalog.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Receipt.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Supermarket.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ProductCatalogFiller.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DiscountStrategy.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DiscountManager.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Utility.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>supermarket</Filter>
     </ClInclude>
     <ClInclude Include="ReceiptHelper.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>supermarket</Filter>
     </ClInclude>
-    <ClInclude Include="ProductCatalog.fwd.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Supermarket.hpp">
+      <Filter>supermarket</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.hpp">
+      <Filter>supermarket</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\DiscountManager.hpp">
+      <Filter>supermarket\discount</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\DiscountStrategy.hpp">
+      <Filter>supermarket\discount</Filter>
+    </ClInclude>
+    <ClInclude Include="product\Product.hpp">
+      <Filter>supermarket\product</Filter>
+    </ClInclude>
+    <ClInclude Include="product\ProductCatalog.fwd.hpp">
+      <Filter>supermarket\product</Filter>
+    </ClInclude>
+    <ClInclude Include="product\ProductCatalog.hpp">
+      <Filter>supermarket\product</Filter>
+    </ClInclude>
+    <ClInclude Include="product\ProductCatalogFiller.hpp">
+      <Filter>supermarket\product</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Product.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProductCatalog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Receipt.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Supermarket.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DiscountStrategy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DiscountManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>supermarket</Filter>
     </ClCompile>
     <ClCompile Include="ReceiptHelper.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>supermarket</Filter>
+    </ClCompile>
+    <ClCompile Include="Supermarket.cpp">
+      <Filter>supermarket</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\DiscountManager.cpp">
+      <Filter>supermarket\discount</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\DiscountStrategy.cpp">
+      <Filter>supermarket\discount</Filter>
+    </ClCompile>
+    <ClCompile Include="product\Product.cpp">
+      <Filter>supermarket\product</Filter>
+    </ClCompile>
+    <ClCompile Include="product\ProductCatalog.cpp">
+      <Filter>supermarket\product</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

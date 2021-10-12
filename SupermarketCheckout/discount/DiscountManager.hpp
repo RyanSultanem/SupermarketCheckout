@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Product.hpp"
+#include "../product/Product.hpp"
 #include "DiscountStrategy.hpp"
 
 namespace supermarket {

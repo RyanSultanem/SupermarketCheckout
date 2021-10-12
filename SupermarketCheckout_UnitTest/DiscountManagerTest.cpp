@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "../SupermarketCheckout/DiscountManager.hpp"
+#include "../SupermarketCheckout/discount/DiscountManager.hpp"
 
 namespace supermarket {
 

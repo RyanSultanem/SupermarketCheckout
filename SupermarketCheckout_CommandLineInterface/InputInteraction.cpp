@@ -1,6 +1,6 @@
 #include "InputInteraction.hpp"
 
-#include "../SupermarketCheckout/ProductCatalogFiller.hpp"
+#include "../SupermarketCheckout/product/ProductCatalogFiller.hpp"
 
 #include "DefaultValues.hpp"
 #include "Utility.hpp"

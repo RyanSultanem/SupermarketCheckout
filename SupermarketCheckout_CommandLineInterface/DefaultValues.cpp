@@ -1,6 +1,6 @@
 #include "DefaultValues.hpp"
 
-#include "../SupermarketCheckout/ProductCatalogFiller.hpp"
+#include "../SupermarketCheckout/product/ProductCatalogFiller.hpp"
 
 class DefaultProductCatalogFiller : public supermarket::ProductCatalogFiller
 {

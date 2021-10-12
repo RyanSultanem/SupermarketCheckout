@@ -1,7 +1,7 @@
 #include "Supermarket.hpp"
 
-#include "ProductCatalogFiller.hpp"
-#include "Product.hpp"
+#include "product/ProductCatalogFiller.hpp"
+#include "product/Product.hpp"
 #include "ReceiptHelper.hpp"
 
 namespace supermarket {
