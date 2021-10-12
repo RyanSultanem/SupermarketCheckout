@@ -2,6 +2,12 @@
 
 #include <istream>
 
+// Definitions
+template<typename T>
+T read(std::istream& in);
+
+
+// Implementation
 template<typename T>
 T read(std::istream & in)
 {

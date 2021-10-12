@@ -7,19 +7,19 @@
 #include <iostream>
 #include <String>
 
-void print(const ProductsCount & products)
+void print(const supermarket::ProductsCount & products)
 {
 	for (auto & product : products)
 		std::cout << product.first.name() << "\t" << product.second << std::endl;
 	std::cout << std::endl;
 }
 
-void print(const ReceiptItem & item, std::ostream & out)
+void print(const supermarket::ReceiptItem & item, std::ostream & out)
 {
 	out << item.productName() << "\t" << "UP: " << item.unitPrice() << "\t" << "#: " << item.itemCount() << "\t" << "T: " << item.computeTotal() << std::endl;
 }
 
-void print(const Receipt & receipt, std::ostream & out)
+void print(const supermarket::Receipt & receipt, std::ostream & out)
 {
 	out << "Receipt:" << std::endl << std::endl;
 
@@ -62,32 +62,28 @@ int main()
 	std::unique_ptr<InteractionHelper> interaction = constructInteractionHelper(readInteractionModeChoice());
 
 	// Consutrct Supermarket
-	Supermarket supermarket = interaction->constructSupermarket();
+	supermarket::Supermarket supermarket = interaction->constructSupermarket();
 
 	bool chooseItems = getChoseItemChoice();
 
 	while (chooseItems)
 	{
 		// Consutrct Order based on supermarket catalog
-		const ProductCatalog & productCatalog = supermarket.productCatalog();
-		ProductsCount order = interaction->constructCustomerOrder(productCatalog);
+		const supermarket::ProductCatalog & productCatalog = supermarket.productCatalog();
+		supermarket::ProductsCount order = interaction->constructCustomerOrder(productCatalog);
 
 		// Print chosen priducts
 		std::cout << "Chosen Products:" << std::endl;
 		print(order);
 
 		// Decide To checkout or not
-		std::cout << "Checkout?" << std::endl;
-		std::cout << "1. Yes" << std::endl;
-		std::cout << "2. No" << std::endl;
-
-		int checkoutChoice = read<int>(std::cin);
+		int checkoutChoice = getChoseItemChoice();
 		std::cout << std::endl;
 
 		if (checkoutChoice == 1)
 		{
 			// Checkout and Get the receipt
-			Receipt receipt = supermarket.checkout(order);
+			supermarket::Receipt receipt = supermarket.checkout(order);
 			
 			// Print Receipt on console
 			print(receipt, std::cout);

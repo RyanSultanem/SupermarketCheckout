@@ -3,6 +3,8 @@
 #include <string>
 #include <unordered_map>
 
+namespace supermarket {
+
 class Product
 {
 public:
@@ -28,12 +30,14 @@ private:
 
 typedef std::unordered_map<Product, int> ProductsCount;
 
+} // namespace supermarket
+
 namespace std {
 
 template<>
-struct hash<Product>
+struct hash<supermarket::Product>
 {
-	std::size_t operator()(const Product & product) const
+	std::size_t operator()(const supermarket::Product & product) const
 	{
 		return (hash<string>()(product.name())
 			 + hash<double>()(product.unitPrice())
@@ -42,3 +46,4 @@ struct hash<Product>
 };
 
 } // namespace std
+

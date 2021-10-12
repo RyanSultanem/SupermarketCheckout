@@ -2,5 +2,5 @@
 
 #include "../SupermarketCheckout/Supermarket.hpp"
 
-Supermarket constructDefaultSupermarket();
+supermarket::Supermarket constructDefaultSupermarket();
 

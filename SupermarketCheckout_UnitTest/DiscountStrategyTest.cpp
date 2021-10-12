@@ -3,6 +3,8 @@
 #include "../SupermarketCheckout/Product.hpp"
 #include "../SupermarketCheckout/DiscountStrategy.hpp"
 
+namespace supermarket {
+
 TEST(DiscountIdenticalProducts, BasicTest)
 {
 	Product p1("P1", 1., true);
@@ -282,3 +284,5 @@ TEST(DiscountComposite, EmptyProducts)
 
 	EXPECT_EQ(discountedProducts.size(), 0);
 }
+
+} // namespace supermarket

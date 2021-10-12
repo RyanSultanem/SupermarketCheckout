@@ -7,15 +7,15 @@
 enum class InteractionMode
 {
 	Default = 1,
-	Custmoize = 2,
+	Customize = 2,
 	File = 3
 };
 
 class InteractionHelper
 {
 public:
-	virtual Supermarket constructSupermarket() const = 0;
-	virtual ProductsCount constructCustomerOrder(const ProductCatalog & productCatalog) const = 0;
+	virtual supermarket::Supermarket constructSupermarket() const = 0;
+	virtual supermarket::ProductsCount constructCustomerOrder(const supermarket::ProductCatalog & productCatalog) const = 0;
 
 	virtual ~InteractionHelper() = default;
 };

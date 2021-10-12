@@ -1,6 +1,7 @@
 #include "DiscountStrategy.hpp"
 #include "Utility.hpp"
 
+namespace supermarket {
 
 DiscountIdenticalItem::DiscountIdenticalItem(int identicalItemCountThreshold)
 	: m_identicalItemCountThreshold(identicalItemCountThreshold)
@@ -123,3 +124,5 @@ DiscountResults DiscountComposite::computeDiscounts(const ProductsCount & discou
 	totalDiscountResult.remainingProductsAvailableForDiscount = remainingDiscountableProducts;
 	return totalDiscountResult;
 }
+
+} // namespace supermarket

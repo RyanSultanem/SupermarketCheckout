@@ -6,6 +6,8 @@
 #include <iterator>
 #include <vector>
 
+namespace supermarket {
+
 static std::vector<ReceiptItem> constructReceiptItemList(const ProductsCount & products)
 {
     std::vector<ReceiptItem> receiptItems;
@@ -33,3 +35,5 @@ Receipt constructReceiptFromProducts(const ProductsCount & products, const Produ
 
     return receipt;
 }
+
+} // namespace supermarket

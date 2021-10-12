@@ -3,6 +3,8 @@
 #include <vector>
 #include <string>
 
+namespace supermarket {
+
 class ReceiptItem
 {
 public:
@@ -46,3 +48,4 @@ private:
 	std::vector<ReceiptItem> m_itemsDiscounted;
 };
 
+} // namespace supermarket

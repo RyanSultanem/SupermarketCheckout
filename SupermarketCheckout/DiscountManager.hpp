@@ -3,6 +3,8 @@
 #include "Product.hpp"
 #include "DiscountStrategy.hpp"
 
+namespace supermarket {
+
 class DiscountManager
 {
 public:
@@ -14,3 +16,5 @@ public:
 private:
 	DiscountComposite m_mainDiscountStrategy;
 };
+
+} // namespace supermarket

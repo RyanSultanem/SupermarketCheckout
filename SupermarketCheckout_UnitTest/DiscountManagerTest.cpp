@@ -2,6 +2,8 @@
 
 #include "../SupermarketCheckout/DiscountManager.hpp"
 
+namespace supermarket {
+
 TEST(DiscountManager, Simple_OnlyElligibleProducts)
 {
 	Product p1("P1", 1., true);
@@ -50,3 +52,5 @@ TEST(DiscountManager, OnlyAffectElligibleProducts)
 	EXPECT_EQ(discountedProducts.size(), 1);
 	EXPECT_EQ(discountedProducts[p1], 1);
 }
+
+} // namespace supermarket

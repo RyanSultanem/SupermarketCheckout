@@ -3,6 +3,8 @@
 #include "../SupermarketCheckout/Supermarket.hpp"
 #include "../SupermarketCheckout/ProductCatalogFiller.hpp"
 
+namespace supermarket {
+
 struct TestGlobalData
 {
 	Product p1 = Product("P1", 1., true);
@@ -36,7 +38,7 @@ static Supermarket constructSupermarketTest()
 	Supermarket supermarket(strategyInfos);
 	supermarket.fillProducts(DefaultProductCatalogFiller());
 
-	return supermarket;
+	return supermarket; 
 }
 
 TEST(Supermarket, OrderProducesReceiptWithTotalAndDiscount)
@@ -93,3 +95,5 @@ TEST(Supermarket, SameOrderTwice_SecondOrderShouldFail)
 	EXPECT_EQ(receipt2.getItems().size(), 0);
 	EXPECT_EQ(receipt2.computeTotal(), 0);
 }
+
+} // namespace supermarket

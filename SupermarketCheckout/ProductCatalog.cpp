@@ -3,6 +3,8 @@
 #include "Product.hpp"
 #include "Utility.hpp"
 
+namespace supermarket {
+
 bool ProductCatalog::hasProducts(const ProductsCount & products) const
 {
 	return utility::mapContainsOtherMap(m_productsCount, products);
@@ -51,3 +53,5 @@ ProductCatalogCIterator ProductCatalog::end() const
 {
 	return m_productsCount.end();
 }
+
+} // namespace supermarket

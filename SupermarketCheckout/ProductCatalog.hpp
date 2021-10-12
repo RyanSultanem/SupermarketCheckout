@@ -4,6 +4,8 @@
 
 #include <unordered_map>
 
+namespace supermarket {
+
 typedef std::unordered_map<Product, int>::const_iterator ProductCatalogCIterator;
 
 class ProductCatalog
@@ -26,3 +28,4 @@ private:
 	ProductsCount m_productsCount;
 };
 
+} // namespace supermarket

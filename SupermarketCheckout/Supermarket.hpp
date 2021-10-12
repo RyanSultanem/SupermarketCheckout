@@ -7,6 +7,8 @@
 
 #include <vector>
 
+namespace supermarket {
+
 class Supermarket
 {
 public:
@@ -28,3 +30,4 @@ private:
 	void removeProductsFromCatalog(const ProductsCount & products);
 };
 
+} // namespace supermarket

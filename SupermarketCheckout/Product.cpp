@@ -1,5 +1,7 @@
 #include "Product.hpp"
 
+namespace supermarket {
+
 const std::string & Product::name() const
 {
 	return m_name;
@@ -21,3 +23,5 @@ bool Product::operator==(const Product & other) const
 		&& m_unitPrice == other.m_unitPrice
 		&& m_qualifyForDiscount == other.m_qualifyForDiscount;
 }
+
+} // namespace supermarket

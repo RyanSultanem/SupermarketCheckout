@@ -4,6 +4,8 @@
 #include "Product.hpp"
 #include "ReceiptHelper.hpp"
 
+namespace supermarket {
+
 Supermarket::Supermarket(const std::vector<std::pair<DiscountStrategyType, int>> & discountStrategyInfos)
 {
     for (auto & discountStrategyInfo : discountStrategyInfos)
@@ -46,3 +48,5 @@ void Supermarket::removeProductsFromCatalog(const ProductsCount & products)
 {
     m_catalog.removeProducts(products);
 }
+
+} // namespace supermarket

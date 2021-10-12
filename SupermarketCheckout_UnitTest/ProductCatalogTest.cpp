@@ -2,6 +2,8 @@
 
 #include "../SupermarketCheckout/ProductCatalog.hpp"
 
+namespace supermarket {
+
 TEST(ProductCatalog, AddingItems)
 {
 	Product p1("P1", 1., true);
@@ -21,7 +23,7 @@ TEST(ProductCatalog, AddingItems)
 	EXPECT_EQ(catalog.procutCount(p2), 6);
 }
 
-TEST(ProductCatalog, RevmoingItems)
+TEST(ProductCatalog, RemovingItems)
 {
 	Product p1("P1", 1., true);
 	Product p2("P2", 2., false);
@@ -45,3 +47,5 @@ TEST(ProductCatalog, RevmoingItems)
 	EXPECT_EQ(catalog.procutCount(p1), 2);
 	EXPECT_EQ(catalog.procutCount(p2), 2);
 }
+
+} // namespace supermarket

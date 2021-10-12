@@ -5,6 +5,8 @@
 #include <map>
 #include <memory>
 
+namespace supermarket {
+
 struct DiscountResults
 {
 	ProductsCount discountedProducts;
@@ -62,3 +64,5 @@ public:
 private:
 	int m_itemCountThreshlod;
 };
+
+} // namespace supermarket

@@ -8,7 +8,7 @@ std::unique_ptr<InteractionHelper> constructInteractionHelper(InteractionMode in
 	switch (interactionMode)
 	{
 	case InteractionMode::Default: return std::make_unique<DefaultInteraction>();
-	case InteractionMode::Custmoize: return std::make_unique<CLIInputInteraction>();
+	case InteractionMode::Customize: return std::make_unique<CLIInputInteraction>();
 	default: return std::make_unique<DefaultInteraction>();
 	}
 }

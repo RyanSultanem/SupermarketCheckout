@@ -4,6 +4,8 @@
 
 #include <vector>
 
+namespace supermarket {
+
 TEST(ReceiptItem, Total)
 {
 	ReceiptItem item("Item", 3, 5.);
@@ -53,3 +55,5 @@ TEST(Receipt, Total_ItemsAndItemsDiscounted)
 	EXPECT_DOUBLE_EQ(receipt.computeTotalUndiscounted(), 6.5);
 	EXPECT_DOUBLE_EQ(receipt.computeTotalDiscount(), 5.);
 }
+
+} // namespace supermarket

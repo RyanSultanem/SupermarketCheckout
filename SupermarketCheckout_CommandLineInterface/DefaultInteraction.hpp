@@ -5,7 +5,7 @@
 class DefaultInteraction : public InteractionHelper
 {
 public:
-	Supermarket constructSupermarket() const;
-	ProductsCount constructCustomerOrder(const ProductCatalog & productCatalog) const;
+	supermarket::Supermarket constructSupermarket() const;
+	supermarket::ProductsCount constructCustomerOrder(const supermarket::ProductCatalog & productCatalog) const;
 };
 

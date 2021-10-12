@@ -8,14 +8,14 @@
 #include <iostream>
 #include <string>
 
-class InputProducCatalogFiller : public ProductCatalogFiller
+class InputProducCatalogFiller : public supermarket::ProductCatalogFiller
 {
 public:
 	InputProducCatalogFiller(std::istream & in)
 		: m_in(in)
 	{}
 
-	void fillProductCatalog(ProductCatalog & producCatalog) const override
+	void fillProductCatalog(supermarket::ProductCatalog & producCatalog) const override
 	{
 		bool add = getAddShoice();
 		while (add)
@@ -27,7 +27,7 @@ public:
 			bool elligibleForDiscount = (elligibleForDiscountCharYN == 'Y');
 			int unitCount = read<int>(m_in);
 
-			producCatalog.addProduct(Product(productName, unitPrice, elligibleForDiscount), unitCount);
+			producCatalog.addProduct(supermarket::Product(productName, unitPrice, elligibleForDiscount), unitCount);
 
 			add = getAddShoice();
 		}
@@ -47,19 +47,19 @@ private:
 	}
 };
 
-static Supermarket constructCustomizedSupermarket(std::istream & in)
+static supermarket::Supermarket constructCustomizedSupermarket(std::istream & in)
 {
-	std::vector<DiscountStrategyInfo> strategyInfos;
-	strategyInfos.push_back({ DiscountStrategyType::IdenticalItems, 3 });
-	strategyInfos.push_back({ DiscountStrategyType::ItemCount,3 });
+	std::vector<supermarket::DiscountStrategyInfo> strategyInfos;
+	strategyInfos.push_back({ supermarket::DiscountStrategyType::IdenticalItems, 3 });
+	strategyInfos.push_back({ supermarket::DiscountStrategyType::ItemCount,3 });
 
-	Supermarket supermarket(strategyInfos);
+	supermarket::Supermarket supermarket(strategyInfos);
 	supermarket.fillProducts(InputProducCatalogFiller(in));
 
 	return supermarket;
 }
 
-Supermarket CLIInputInteraction::constructSupermarket() const
+supermarket::Supermarket CLIInputInteraction::constructSupermarket() const
 {
 	std::cout << "Supermarket Initialization" << std::endl;
 	std::cout << "1. Default Supermarket" << std::endl;
@@ -76,14 +76,14 @@ Supermarket CLIInputInteraction::constructSupermarket() const
 	return constructDefaultSupermarket();
 }
 
-ProductsCount CLIInputInteraction::constructCustomerOrder(const ProductCatalog & productCatalog) const
+supermarket::ProductsCount CLIInputInteraction::constructCustomerOrder(const supermarket::ProductCatalog & productCatalog) const
 {
 	int counter = 0;
-	std::unordered_map<int, Product> choicesMap;
+	std::unordered_map<int, supermarket::Product> choicesMap;
 	for (auto & productCount : productCatalog)
 	{
 		int id = counter + 1;
-		const Product & product = productCount.first;
+		const supermarket::Product & product = productCount.first;
 		choicesMap[id] = product;
 
 		std::cout << id << ". "
@@ -97,7 +97,7 @@ ProductsCount CLIInputInteraction::constructCustomerOrder(const ProductCatalog &
 
 	std::cout << "Choose: ProductId Count  (Type 0 to stop)." << std::endl;
 
-	ProductsCount order;
+	supermarket::ProductsCount order;
 	int itemChoice = read<int>(std::cin);
 	while (itemChoice != 0 || itemChoice >= choicesMap.size())
 	{

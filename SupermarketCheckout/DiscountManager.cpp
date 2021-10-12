@@ -2,6 +2,8 @@
 
 #include "DiscountStrategy.hpp"
 
+namespace supermarket {
+
 void DiscountManager::addDiscountStrategy(DiscountStrategyType strategyType, int threshold)
 {
 	m_mainDiscountStrategy.addStrategy(strategyType, threshold);
@@ -25,3 +27,5 @@ ProductsCount DiscountManager::computeDiscount(const ProductsCount & products)
 	ProductsCount discountableProducts = constructDiscountableProducts(products);
 	return m_mainDiscountStrategy.computeDiscounts(discountableProducts).discountedProducts;
 }
+
+} // namespace supermarket

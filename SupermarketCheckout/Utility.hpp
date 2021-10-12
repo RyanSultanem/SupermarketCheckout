@@ -6,6 +6,7 @@
 #include <unordered_map>
 
 // Utility Definitions
+namespace supermarket {
 namespace utility {
 
 template<typename Item>
@@ -24,9 +25,11 @@ template<typename Item>
 bool mapRemoveOtherMap(std::unordered_map<Item, int> & mainMap, const std::unordered_map<Item, int> & mapToRemove);
 
 } // namespace utility
+} // namespace supermarket
 
 
 // Utility Template Implementations
+namespace supermarket {
 namespace utility {
 
 template<typename Item>
@@ -87,3 +90,4 @@ bool mapRemoveOtherMap(std::unordered_map<Item, int> & mainMap, const std::unord
 }
 
 } // namespace utility
+} // namespace supermarket

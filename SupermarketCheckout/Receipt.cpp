@@ -2,6 +2,8 @@
 
 #include <numeric>
 
+namespace supermarket {
+
 double ReceiptItem::computeTotal() const
 {
     return m_unitPrice * m_itemCount;
@@ -52,3 +54,5 @@ double Receipt::computeTotalUndiscounted() const
 {
     return computeReceiptItemsTotal(m_items);
 }
+
+} // namespace supermarket
