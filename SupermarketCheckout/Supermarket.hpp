@@ -26,6 +26,8 @@ public:
 
 	Receipt checkout(const ProductsCount & products);
 
+	const std::vector<Receipt> & receiptHistory() const;
+
 private:
 	ProductCatalog m_catalog;
 	DiscountManager m_discountManager;

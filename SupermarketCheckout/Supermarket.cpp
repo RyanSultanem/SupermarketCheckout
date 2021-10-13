@@ -35,6 +35,11 @@ Receipt Supermarket::checkout(const ProductsCount & customerItems)
     return receipt;
 }
 
+const std::vector<Receipt> & Supermarket::receiptHistory() const
+{
+    return m_receiptHistory;
+}
+
 const ProductCatalog & Supermarket::productCatalog() const
 {
     return m_catalog;

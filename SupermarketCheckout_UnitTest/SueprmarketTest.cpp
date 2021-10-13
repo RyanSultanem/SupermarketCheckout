@@ -62,6 +62,7 @@ TEST(Supermarket, OrderProducesReceiptWithTotalAndDiscount)
 	EXPECT_DOUBLE_EQ(receipt.computeTotalUndiscounted(), undiscountedTotal);
 	EXPECT_DOUBLE_EQ(receipt.computeTotalDiscount(), discountedTotal);
 	EXPECT_DOUBLE_EQ(receipt.computeTotal(), undiscountedTotal - discountedTotal);
+	EXPECT_EQ(supermarket.receiptHistory().size(), 1);
 }
 
 TEST(Supermarket, OrderNotPresentInSupermarket_EmptyReceipt)
@@ -76,6 +77,7 @@ TEST(Supermarket, OrderNotPresentInSupermarket_EmptyReceipt)
 
 	EXPECT_EQ(receipt.getItems().size(), 0);
 	EXPECT_EQ(receipt.computeTotal(), 0);
+	EXPECT_EQ(supermarket.receiptHistory().size(), 0);
 }
 
 TEST(Supermarket, SameOrderTwice_SecondOrderShouldFail)
