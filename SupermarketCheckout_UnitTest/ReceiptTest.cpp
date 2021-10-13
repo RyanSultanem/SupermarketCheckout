@@ -32,8 +32,8 @@ TEST(Receipt, Total_Items)
 {
 	Receipt receipt;
 
-	receipt.addItems({ ReceiptItem("Item1", 1, 1.5) });
-	receipt.addItems({ ReceiptItem("Item2", 2, 2.5) });
+	receipt.addItemsUndiscounted({ ReceiptItem("Item1", 1, 1.5) });
+	receipt.addItemsUndiscounted({ ReceiptItem("Item2", 2, 2.5) });
 
 	EXPECT_EQ(receipt.getItems().size(), 2);
 	EXPECT_DOUBLE_EQ(receipt.computeTotal(), 6.5);
@@ -44,7 +44,7 @@ TEST(Receipt, Total_ItemsAndItemsDiscounted)
 {
 	Receipt receipt;
 
-	receipt.addItems({ ReceiptItem("Item1", 1, 1.5) });
+	receipt.addItemsUndiscounted({ ReceiptItem("Item1", 1, 1.5) });
 
 	receipt.addItemsDiscounted({ ReceiptItem("Item2", 2, 2.5) });
 

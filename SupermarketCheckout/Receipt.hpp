@@ -52,10 +52,14 @@ class Receipt
 public:
 	Receipt() = default;
 
+	// Returns all items, discounted and undiscounted
 	const std::unordered_set<ReceiptItem> getItems() const;
+	// Return the discounted items
 	const std::unordered_set<ReceiptItem> getItemsDiscounted() const;
 
-	void addItems(const std::unordered_set<ReceiptItem> & items);
+	// Only add Items that are not discounted
+	void addItemsUndiscounted(const std::unordered_set<ReceiptItem> & items);
+	// Only add Items that weere discounted
 	void addItemsDiscounted(const std::unordered_set<ReceiptItem> & itemsDiscounted);
 
 	double computeTotal() const;

@@ -15,7 +15,7 @@ DiscountResults DiscountIdenticalItem::computeDiscounts(const ProductsCount & di
 	for (auto & productCount : discountableProducts)
 	{
 		int freeItemCount = productCount.second / m_identicalItemCountThreshold;
-		if (freeItemCount > 0)
+		if (freeItemCount > 0) // In order not to create empty entries
 		{
 			discountedProducts[productCount.first] = freeItemCount;
 			remainingProductsAvailableForDiscounts[productCount.first] -= freeItemCount * m_identicalItemCountThreshold;
@@ -111,11 +111,14 @@ DiscountResults DiscountComposite::computeDiscounts(const ProductsCount & discou
 	ProductsCount totalDiscountedProducts;
 	ProductsCount remainingDiscountableProducts = discountableProducts;
 
+	// Apply discount strategies in order
 	for (auto & discountStrategy : m_discountStrategies)
 	{
+		// Compute each result and merge it to the overall result
 		DiscountResults innerDiscountsResult = discountStrategy.second->computeDiscounts(remainingDiscountableProducts);
 		utility::mergeMaps(totalDiscountedProducts, innerDiscountsResult.discountedProducts);
 
+		// Make sure next strategy only apply to products that were not affected by earlier discounts
 		remainingDiscountableProducts = innerDiscountsResult.remainingProductsAvailableForDiscount;
 	}
 

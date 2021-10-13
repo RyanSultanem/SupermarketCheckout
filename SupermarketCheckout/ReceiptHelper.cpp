@@ -25,7 +25,7 @@ Receipt constructReceiptFromProducts(const ProductsCount & products, const Produ
 
     Receipt receipt;
 
-    receipt.addItems(constructReceiptItemList(nonDiscountedProducts));
+    receipt.addItemsUndiscounted(constructReceiptItemList(nonDiscountedProducts));
     receipt.addItemsDiscounted(constructReceiptItemList(discountedProducts));
 
     return receipt;

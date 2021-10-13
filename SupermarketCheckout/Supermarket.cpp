@@ -19,10 +19,16 @@ Receipt Supermarket::checkout(const ProductsCount & customerItems)
         // Inconsistent Data, should either throw an exception or send an error.
         return Receipt();
     }
+
+    // Remove bought product
     removeProductsFromCatalog(customerItems);
 
+    // Compute discountedProducts
     ProductsCount discountedProducts = m_discountManager.computeDiscount(customerItems);
+
+    //Construct the receipt
     Receipt receipt = constructReceiptFromProducts(customerItems, discountedProducts);
+
     // Save Receipt History
     bookReceit(receipt);
 

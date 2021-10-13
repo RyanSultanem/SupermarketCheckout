@@ -11,7 +11,7 @@ double ReceiptItem::computeTotal() const
 
 bool ReceiptItem::operator==(const ReceiptItem & other) const
 {
-    // Item count left out on purpose, used as an output.
+    // Item count left out on purpose, part of the output.
     return m_productName == other.m_productName
         && m_unitPrice == other.m_unitPrice;
 }
@@ -38,6 +38,7 @@ static void addItemsInternal(std::unordered_set<ReceiptItem> & items, const std:
         }
         else
         {
+            // In order not to have repeated items of the same product, we add up the counts
             const ReceiptItem & currentItem = *it;
             int newCount = currentItem.itemCount() + itemToAdd.itemCount();
 
@@ -49,7 +50,7 @@ static void addItemsInternal(std::unordered_set<ReceiptItem> & items, const std:
     }
 }
 
-void Receipt::addItems(const std::unordered_set<ReceiptItem> & items)
+void Receipt::addItemsUndiscounted(const std::unordered_set<ReceiptItem> & items)
 {
     addItemsInternal(m_items, items);
 }
@@ -57,7 +58,7 @@ void Receipt::addItems(const std::unordered_set<ReceiptItem> & items)
 void Receipt::addItemsDiscounted(const std::unordered_set<ReceiptItem> & itemsDiscounted)
 {
     // To ensure allignement, always add the complement of the discounted element.
-    addItems(itemsDiscounted);
+    addItemsInternal(m_items, itemsDiscounted);
     addItemsInternal(m_itemsDiscounted, itemsDiscounted);
 }
 
