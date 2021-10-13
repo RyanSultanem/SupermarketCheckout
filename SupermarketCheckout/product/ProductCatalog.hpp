@@ -8,6 +8,10 @@ namespace supermarket {
 
 typedef std::unordered_map<Product, int>::const_iterator ProductCatalogCIterator;
 
+/// <summary>
+/// The product catalog is a wrapper for a map of products to the number of items of that product.
+/// Lke a dictionary used mainly by the supermarket to list the products it contains.
+/// </summary>
 class ProductCatalog
 {
 public:

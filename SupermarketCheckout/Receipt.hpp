@@ -5,6 +5,9 @@
 
 namespace supermarket {
 
+/// <summary>
+/// Structure to display the receipt information per product. 
+/// </summary>
 class ReceiptItem
 {
 public:
@@ -47,6 +50,9 @@ struct hash<supermarket::ReceiptItem>
 
 namespace supermarket {
 
+/// <summary>
+/// The output containing all the receipt items for non-discounted products, discounted products, and allow to compute total and subtotals.
+/// </summary>
 class Receipt
 {
 public:

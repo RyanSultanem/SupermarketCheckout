@@ -9,6 +9,13 @@
 
 namespace supermarket {
 
+/// <summary>
+/// The entry point of the library.
+/// This class contains the list of products to be bought.
+/// Allows the customer to checkout a list of items and receive a receipt
+/// The history of receipt is also stored in the supermarket.
+/// Also exposes a method to allow the filling of the products in the supermarket. 
+/// </summary>
 class Supermarket
 {
 public:

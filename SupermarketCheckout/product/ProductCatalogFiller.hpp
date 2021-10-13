@@ -4,6 +4,9 @@
 
 namespace supermarket {
 
+/// <summary>
+/// An interface that exposes a product catalog to be filled. 
+/// </summary>
 class ProductCatalogFiller
 {
 public:

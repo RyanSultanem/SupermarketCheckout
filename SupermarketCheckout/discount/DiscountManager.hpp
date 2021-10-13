@@ -5,9 +5,11 @@
 
 namespace supermarket {
 
-// Entry point of the discount module
-// Filters out the Products that are eligible for discount
-// Then compute the discount on the remaining products
+/// <summary>
+/// The main entry point of the discounting logic.
+/// For now simply filters out the products eligible for discount, 
+/// and delegates to the discount strategy to compute the discounted items result. 
+/// </summary>
 class DiscountManager
 {
 public:

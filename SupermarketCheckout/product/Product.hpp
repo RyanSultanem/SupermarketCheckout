@@ -5,6 +5,9 @@
 
 namespace supermarket {
 
+/// <summary>
+///  A structure containing the product name, the unit price, and whether the product is eligible for discounts or not. 
+/// </summary>
 class Product
 {
 public:
@@ -28,6 +31,10 @@ private:
 	bool m_qualifyForDiscount = false;
 };
 
+/// <summary>
+/// ProductsCount:
+/// Type definition for an unordered_map of Products to count, marking a group of items of products. It is the main way to group the products in the overall library. 
+/// </summary>
 typedef std::unordered_map<Product, int> ProductsCount;
 
 } // namespace supermarket
