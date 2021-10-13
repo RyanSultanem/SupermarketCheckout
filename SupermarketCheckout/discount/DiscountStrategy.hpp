@@ -13,7 +13,9 @@ struct DiscountResults
 	ProductsCount remainingProductsAvailableForDiscount;
 };
 
-// These values should be ordered by priority to ensure DiscountComposite application order from lowest to highest
+/// <summary>
+/// Enum denoting the priority of the appliance of discounting rules, mainly used in DiscountComposite.
+/// </summary>
 enum class DiscountStrategyType
 {
 	IdenticalItems,
